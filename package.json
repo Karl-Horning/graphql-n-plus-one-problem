@@ -1,0 +1,33 @@
+{
+  "name": "graphql-n-plus-one-problem",
+  "version": "1.0.0",
+  "description": "An example of and solution for the GraphQL N+1 problem.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karl-Horning/graphql-n-plus-one-problem.git"
+  },
+  "keywords": [
+    "graphql"
+  ],
+  "author": "Karl Horning",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Karl-Horning/graphql-n-plus-one-problem/issues"
+  },
+  "homepage": "https://github.com/Karl-Horning/graphql-n-plus-one-problem#readme",
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "nodemon": "^3.0.3"
+  },
+  "dependencies": {
+    "apollo-server": "^3.13.0",
+    "chalk": "^2.4.2",
+    "graphql": "^16.8.1"
+  }
+}
