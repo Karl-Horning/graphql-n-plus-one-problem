@@ -1,0 +1,406 @@
+{
+    "authors": [
+        {
+            "id": 1,
+            "name": "Jane Austen",
+            "birth_date": "16 December 1775",
+            "death_date": "18 July 1817",
+            "works": [
+                {
+                    "id": 1,
+                    "title": "Sense and Sensibility",
+                    "year": 1811,
+                    "notes": null
+                },
+                {
+                    "id": 2,
+                    "title": "Pride and Prejudice",
+                    "year": 1813,
+                    "notes": null
+                },
+                {
+                    "id": 3,
+                    "title": "Mansfield Park",
+                    "year": 1814,
+                    "notes": null
+                },
+                {
+                    "id": 4,
+                    "title": "Emma",
+                    "year": 1815,
+                    "notes": null
+                },
+                {
+                    "id": 5,
+                    "title": "Northanger Abbey",
+                    "year": 1818,
+                    "notes": "posthumously published"
+                },
+                {
+                    "id": 6,
+                    "title": "Persuasion",
+                    "year": 1818,
+                    "notes": "posthumously published"
+                }
+            ],
+            "bio": "Jane Austen was a Georgian and Regency-era novelist born on 16 December 1775 and died on 18 July 1817. Known for her wit and keen observations, Austen's novels explore the relationships and manners of the English landed gentry in the early 19th century."
+        },
+        {
+            "id": 2,
+            "name": "Charlotte Brontë",
+            "birth_date": "21 April 1816",
+            "death_date": "31 March 1855",
+            "works": [
+                {
+                    "id": 7,
+                    "title": "Jane Eyre",
+                    "year": 1847,
+                    "notes": null
+                },
+                {
+                    "id": 8,
+                    "title": "Shirley",
+                    "year": 1849,
+                    "notes": null
+                },
+                {
+                    "id": 9,
+                    "title": "Villette",
+                    "year": 1853,
+                    "notes": null
+                }
+            ],
+            "bio": "Charlotte Brontë was a Victorian novelist born on 21 April 1816 and died on 31 March 1855. She is best known for her novel 'Jane Eyre,' which remains a classic of English literature."
+        },
+        {
+            "id": 3,
+            "name": "Anne Brontë",
+            "birth_date": "17 January 1820",
+            "death_date": "28 May 1849",
+            "works": [
+                {
+                    "id": 10,
+                    "title": "Agnes Grey",
+                    "year": 1847,
+                    "notes": null
+                },
+                {
+                    "id": 11,
+                    "title": "The Tenant of Wildfell Hall",
+                    "year": 1848,
+                    "notes": null
+                }
+            ],
+            "bio": "Anne Brontë was a Victorian novelist born on 17 January 1820 and died on 28 May 1849. She is known for her novels 'Agnes Grey' and 'The Tenant of Wildfell Hall.'"
+        },
+        {
+            "id": 4,
+            "name": "Charles Dickens",
+            "birth_date": "7 February 1812",
+            "death_date": "9 June 1870",
+            "works": [
+                {
+                    "id": 12,
+                    "title": "The Pickwick Papers",
+                    "year": 1837,
+                    "notes": null
+                },
+                {
+                    "id": 13,
+                    "title": "Oliver Twist",
+                    "year": "1837-1839",
+                    "notes": null
+                },
+                {
+                    "id": 14,
+                    "title": "Nicholas Nickleby",
+                    "year": "1838-1839",
+                    "notes": null
+                },
+                {
+                    "id": 15,
+                    "title": "A Christmas Carol",
+                    "year": 1843,
+                    "notes": null
+                },
+                {
+                    "id": 16,
+                    "title": "David Copperfield",
+                    "year": "1849-1850",
+                    "notes": null
+                },
+                {
+                    "id": 17,
+                    "title": "Bleak House",
+                    "year": "1852-1853",
+                    "notes": null
+                },
+                {
+                    "id": 18,
+                    "title": "A Tale of Two Cities",
+                    "year": 1859,
+                    "notes": null
+                },
+                {
+                    "id": 19,
+                    "title": "Great Expectations",
+                    "year": "1860-1861",
+                    "notes": null
+                }
+            ],
+            "bio": "Charles Dickens was a Victorian novelist born on 7 February 1812 and died on 9 June 1870. Dickens is one of the most celebrated and prolific authors of the 19th century. His novels, known for their vivid characters and social commentary, reflect the realities of Victorian society. Some of his most famous works include 'A Tale of Two Cities,' 'Great Expectations,' and 'A Christmas Carol.'"
+        },
+        {
+            "id": 5,
+            "name": "George Eliot",
+            "birth_date": "22 November 1819",
+            "death_date": "22 December 1880",
+            "works": [
+                {
+                    "id": 20,
+                    "title": "Adam Bede",
+                    "year": 1859,
+                    "notes": null
+                },
+                {
+                    "id": 21,
+                    "title": "The Mill on the Floss",
+                    "year": 1860,
+                    "notes": null
+                },
+                {
+                    "id": 22,
+                    "title": "Silas Marner",
+                    "year": 1861,
+                    "notes": null
+                },
+                {
+                    "id": 23,
+                    "title": "Romola",
+                    "year": "1862-1863",
+                    "notes": null
+                },
+                {
+                    "id": 24,
+                    "title": "Felix Holt, the Radical",
+                    "year": 1866,
+                    "notes": null
+                },
+                {
+                    "id": 25,
+                    "title": "Middlemarch",
+                    "year": "1871-1872",
+                    "notes": null
+                }
+            ],
+            "bio": "George Eliot (Mary Ann Evans) was a prominent Victorian novelist born on 22 November 1819 and died on 22 December 1880. Her novels often explore complex characters, psychological insight, and societal issues of her time. 'Middlemarch' is considered one of her masterpieces."
+        },
+        {
+            "id": 6,
+            "name": "Thomas Hardy",
+            "birth_date": "2 June 1840",
+            "death_date": "11 January 1928",
+            "works": [
+                {
+                    "id": 26,
+                    "title": "Desperate Remedies",
+                    "year": 1871,
+                    "notes": null
+                },
+                {
+                    "id": 27,
+                    "title": "Under the Greenwood Tree",
+                    "year": 1872,
+                    "notes": null
+                },
+                {
+                    "id": 28,
+                    "title": "A Pair of Blue Eyes",
+                    "year": 1873,
+                    "notes": null
+                },
+                {
+                    "id": 29,
+                    "title": "Far from the Madding Crowd",
+                    "year": 1874,
+                    "notes": null
+                },
+                {
+                    "id": 30,
+                    "title": "The Return of the Native",
+                    "year": 1878,
+                    "notes": null
+                },
+                {
+                    "id": 31,
+                    "title": "Tess of the d'Urbervilles",
+                    "year": 1891,
+                    "notes": null
+                },
+                {
+                    "id": 32,
+                    "title": "Jude the Obscure",
+                    "year": 1895,
+                    "notes": null
+                }
+            ],
+            "bio": "Thomas Hardy was a Victorian novelist born on 2 June 1840 and died on 11 January 1928. He is known for his novels that explore rural life, social issues, and the complexities of human relationships in Victorian England."
+        },
+        {
+            "id": 7,
+            "name": "Edgar Allan Poe",
+            "birth_date": "19 January 1809",
+            "death_date": "7 October 1849",
+            "works": [
+                {
+                    "id": 33,
+                    "title": "The Tell-Tale Heart",
+                    "year": 1843,
+                    "notes": null
+                },
+                {
+                    "id": 34,
+                    "title": "The Fall of the House of Usher",
+                    "year": 1839,
+                    "notes": null
+                },
+                {
+                    "id": 35,
+                    "title": "The Murders in the Rue Morgue",
+                    "year": 1841,
+                    "notes": null
+                },
+                {
+                    "id": 36,
+                    "title": "The Masque of the Red Death",
+                    "year": 1842,
+                    "notes": null
+                },
+                {
+                    "id": 37,
+                    "title": "The Pit and the Pendulum",
+                    "year": 1842,
+                    "notes": null
+                },
+                {
+                    "id": 38,
+                    "title": "The Raven",
+                    "year": 1845,
+                    "notes": null
+                },
+                {
+                    "id": 39,
+                    "title": "The Cask of Amontillado",
+                    "year": 1846,
+                    "notes": null
+                },
+                {
+                    "id": 40,
+                    "title": "Annabel Lee",
+                    "year": 1849,
+                    "notes": null
+                }
+            ],
+            "bio": "Edgar Allan Poe was an American writer born on 19 January 1809 and died on 7 October 1849. He is known for his dark and macabre tales. His works often explore themes of madness, death, and the macabre, and he is considered a master of the short story and poetry in the Gothic tradition. 'The Raven' is one of his most famous poems, and 'The Tell-Tale Heart' and 'The Fall of the House of Usher' are among his well-known short stories."
+        },
+        {
+            "id": 8,
+            "name": "Mark Twain",
+            "birth_date": "30 November 1835",
+            "death_date": "21 April 1910",
+            "works": [
+                {
+                    "id": 41,
+                    "title": "The Celebrated Jumping Frog of Calaveras County",
+                    "year": 1865,
+                    "notes": null
+                },
+                {
+                    "id": 42,
+                    "title": "The Innocents Abroad",
+                    "year": 1869,
+                    "notes": null
+                },
+                {
+                    "id": 43,
+                    "title": "The Adventures of Tom Sawyer",
+                    "year": 1876,
+                    "notes": null
+                },
+                {
+                    "id": 44,
+                    "title": "The Prince and the Pauper",
+                    "year": 1881,
+                    "notes": null
+                },
+                {
+                    "id": 45,
+                    "title": "Adventures of Huckleberry Finn",
+                    "year": 1884,
+                    "notes": null
+                },
+                {
+                    "id": 46,
+                    "title": "A Connecticut Yankee in King Arthur's Court",
+                    "year": 1889,
+                    "notes": null
+                }
+            ],
+            "bio": "Mark Twain (Samuel Clemens) was an American writer born on 30 November 1835 and died on 21 April 1910. He is known for his humour, social commentary, and iconic works such as 'The Adventures of Tom Sawyer' and 'Adventures of Huckleberry Finn.'"
+        },
+        {
+            "id": 9,
+            "name": "Emily Brontë",
+            "birth_date": "30 July 1818",
+            "death_date": "19 December 1848",
+            "works": [
+                {
+                    "id": 47,
+                    "title": "Wuthering Heights",
+                    "year": 1847,
+                    "notes": null
+                }
+            ],
+            "bio": "Emily Brontë was a Victorian novelist born on 30 July 1818 and died on 19 December 1848. She is best known for her only novel, 'Wuthering Heights,' which is considered a classic of English literature."
+        },
+        {
+            "id": 10,
+            "name": "Oscar Wilde",
+            "birth_date": "16 October 1854",
+            "death_date": "30 November 1900",
+            "works": [
+                {
+                    "id": 48,
+                    "title": "The Picture of Dorian Gray",
+                    "year": 1890,
+                    "notes": null
+                },
+                {
+                    "id": 49,
+                    "title": "The Happy Prince and Other Tales",
+                    "year": 1888,
+                    "notes": null
+                },
+                {
+                    "id": 50,
+                    "title": "De Profundis",
+                    "year": 1905,
+                    "notes": null
+                },
+                {
+                    "id": 51,
+                    "title": "The Importance of Being Earnest",
+                    "year": 1895,
+                    "notes": null
+                },
+                {
+                    "id": 52,
+                    "title": "Salomé",
+                    "year": "published in 1893, performed in 1896",
+                    "notes": null
+                }
+            ],
+            "bio": "Oscar Wilde was an Irish playwright, poet, and author born on 16 October 1854 and died on 30 November 1900. Wilde is known for his wit, satirical plays, and flamboyant style. 'The Picture of Dorian Gray' is his only novel and remains one of his most famous and enduring works. 'The Importance of Being Earnest' is considered one of the greatest comedies in the English language."
+        }
+    ]
+}
