@@ -1,7 +1,8 @@
 const dotenv = require("dotenv");
 const { ApolloServer } = require("apollo-server");
 const chalk = require("chalk");
-const typeDefs = require("./src/schema");
+const resolvers = require("./src/resolvers");
+const typeDefs = require("./src/schemas");
 
 // Load environment variables from .env file
 dotenv.config();
@@ -18,7 +19,7 @@ let server;
  */
 const startApolloServer = async () => {
     try {
-        server = new ApolloServer({ typeDefs });
+        server = new ApolloServer({ typeDefs, resolvers });
         const { url } = await server.listen({ port });
         console.log(`Apollo Server started at ${url} 🚀`);
     } catch (error) {
