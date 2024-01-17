@@ -1,0 +1,33 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Define the Prisma client generator
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Define the datasource, in this case, it's an SQLite database
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Define the Author model
+model Author {
+  id        Int       @id @default(autoincrement()) @map("id")
+  name      String    @unique
+  birthDate DateTime
+  deathDate DateTime
+  bio       String
+  works     Work[]    // Define a relation to the Work model
+}
+
+// Define the Work model
+model Work {
+  id        Int      @id @default(autoincrement()) @map("id")
+  title     String
+  year      String
+  notes     String
+  authorId  Int      @map("authorId")
+  author    Author   @relation(fields: [authorId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+}
