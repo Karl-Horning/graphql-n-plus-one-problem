@@ -2,6 +2,24 @@ const fs = require("fs").promises;
 
 const resolvers = {
     Query: {
+        getAllAuthors: async () => {
+            try {
+                const jsonData = await fs.readFile(
+                    "src/data/data.json",
+                    "utf-8"
+                );
+                const authorsData = JSON.parse(jsonData);
+
+                if (!authorsData) {
+                    throw new Error(`Author data not found`);
+                }
+
+                return authorsData;
+            } catch (error) {
+                console.error("Error reading JSON file:", error);
+                throw new Error("Failed to read JSON file");
+            }
+        },
         getAuthorById: async (_, { id }) => {
             try {
                 const jsonData = await fs.readFile(

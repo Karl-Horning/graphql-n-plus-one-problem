@@ -2,8 +2,8 @@
     {
         "id": 1,
         "name": "Jane Austen",
-        "birth_date": "16 December 1775",
-        "death_date": "18 July 1817",
+        "birthDate": "16 December 1775",
+        "deathDate": "18 July 1817",
         "works": [
             {
                 "id": 1,
@@ -47,8 +47,8 @@
     {
         "id": 2,
         "name": "Charlotte Brontë",
-        "birth_date": "21 April 1816",
-        "death_date": "31 March 1855",
+        "birthDate": "21 April 1816",
+        "deathDate": "31 March 1855",
         "works": [
             {
                 "id": 7,
@@ -74,8 +74,8 @@
     {
         "id": 3,
         "name": "Anne Brontë",
-        "birth_date": "17 January 1820",
-        "death_date": "28 May 1849",
+        "birthDate": "17 January 1820",
+        "deathDate": "28 May 1849",
         "works": [
             {
                 "id": 10,
@@ -95,8 +95,8 @@
     {
         "id": 4,
         "name": "Charles Dickens",
-        "birth_date": "7 February 1812",
-        "death_date": "9 June 1870",
+        "birthDate": "7 February 1812",
+        "deathDate": "9 June 1870",
         "works": [
             {
                 "id": 12,
@@ -152,8 +152,8 @@
     {
         "id": 5,
         "name": "George Eliot",
-        "birth_date": "22 November 1819",
-        "death_date": "22 December 1880",
+        "birthDate": "22 November 1819",
+        "deathDate": "22 December 1880",
         "works": [
             {
                 "id": 20,
@@ -197,8 +197,8 @@
     {
         "id": 6,
         "name": "Thomas Hardy",
-        "birth_date": "2 June 1840",
-        "death_date": "11 January 1928",
+        "birthDate": "2 June 1840",
+        "deathDate": "11 January 1928",
         "works": [
             {
                 "id": 26,
@@ -248,8 +248,8 @@
     {
         "id": 7,
         "name": "Edgar Allan Poe",
-        "birth_date": "19 January 1809",
-        "death_date": "7 October 1849",
+        "birthDate": "19 January 1809",
+        "deathDate": "7 October 1849",
         "works": [
             {
                 "id": 33,
@@ -305,8 +305,8 @@
     {
         "id": 8,
         "name": "Mark Twain",
-        "birth_date": "30 November 1835",
-        "death_date": "21 April 1910",
+        "birthDate": "30 November 1835",
+        "deathDate": "21 April 1910",
         "works": [
             {
                 "id": 41,
@@ -350,8 +350,8 @@
     {
         "id": 9,
         "name": "Emily Brontë",
-        "birth_date": "30 July 1818",
-        "death_date": "19 December 1848",
+        "birthDate": "30 July 1818",
+        "deathDate": "19 December 1848",
         "works": [
             {
                 "id": 47,
@@ -365,8 +365,8 @@
     {
         "id": 10,
         "name": "Oscar Wilde",
-        "birth_date": "16 October 1854",
-        "death_date": "30 November 1900",
+        "birthDate": "16 October 1854",
+        "deathDate": "30 November 1900",
         "works": [
             {
                 "id": 48,

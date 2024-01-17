@@ -11,13 +11,14 @@ const typeDefs = gql`
     type Author {
         id: Int!
         name: String!
-        birth_date: String!
-        death_date: String!
+        birthDate: String!
+        deathDate: String!
         works: [Work!]!
         bio: String!
     }
 
     type Query {
+        getAllAuthors: [Author!]!
         getAuthorById(id: Int!): Author
     }
 `;
