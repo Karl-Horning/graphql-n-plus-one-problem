@@ -6,6 +6,8 @@ const typeDefs = gql`
         title: String!
         year: String!
         notes: String
+        authorId: Int!
+        author(id: Int): Author
     }
 
     type Author {
