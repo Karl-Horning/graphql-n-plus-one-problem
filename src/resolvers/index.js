@@ -1,14 +1,28 @@
-const fs = require("fs").promises;
+const { PrismaClient } = require("@prisma/client");
+
+const prisma = new PrismaClient();
+
+const getAllAuthors = async () => prisma.author.findMany();
+
+const getAuthorById = async (id) =>
+    prisma.author.findUnique({
+        where: {
+            id,
+        },
+    });
+
+const getWorksByAuthor = async (authorId) =>
+    prisma.work.findMany({
+        where: {
+            authorId,
+        },
+    });
 
 const resolvers = {
     Query: {
         getAllAuthors: async () => {
             try {
-                const jsonData = await fs.readFile(
-                    "src/data/data.json",
-                    "utf-8"
-                );
-                const authorsData = JSON.parse(jsonData);
+                const authorsData = await getAllAuthors();
 
                 if (!authorsData) {
                     throw new Error(`Author data not found`);
@@ -22,14 +36,7 @@ const resolvers = {
         },
         getAuthorById: async (_, { id }) => {
             try {
-                const jsonData = await fs.readFile(
-                    "src/data/data.json",
-                    "utf-8"
-                );
-                const authorsData = JSON.parse(jsonData);
-
-                // Find the author with the specified ID
-                const author = authorsData.find((a) => a.id === id);
+                const author = await getAuthorById(id);
 
                 if (!author) {
                     throw new Error(`Author with ID ${id} not found`);
@@ -39,6 +46,16 @@ const resolvers = {
             } catch (error) {
                 console.error("Error reading JSON file:", error);
                 throw new Error("Failed to read JSON file");
+            }
+        },
+    },
+    Author: {
+        works: async ({ id }) => {
+            try {
+                return getWorksByAuthor(id);
+            } catch (error) {
+                console.error(`Error getting works for author ${id}:`, error);
+                throw new Error(`Failed to get works for author ${id}`);
             }
         },
     },
