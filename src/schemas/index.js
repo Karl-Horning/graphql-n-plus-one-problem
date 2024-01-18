@@ -22,6 +22,8 @@ const typeDefs = gql`
     type Query {
         getAllAuthors: [Author!]!
         getAuthorById(id: Int!): Author
+        getAllWorks: [Work!]!
+        getWorkById(id: Int!): Work
     }
 `;
 

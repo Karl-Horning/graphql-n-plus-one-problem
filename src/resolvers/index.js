@@ -11,10 +11,26 @@ const getAuthorById = async (id) =>
         },
     });
 
+const getAllWorks = async () => prisma.work.findMany();
+
+const getWorkById = async (id) =>
+    prisma.work.findUnique({
+        where: {
+            id,
+        },
+    });
+
 const getWorksByAuthor = async (authorId) =>
     prisma.work.findMany({
         where: {
             authorId,
+        },
+    });
+
+const getAuthorOfWork = async (id) =>
+    prisma.author.findUnique({
+        where: {
+            id,
         },
     });
 
@@ -30,8 +46,8 @@ const resolvers = {
 
                 return authorsData;
             } catch (error) {
-                console.error("Error reading JSON file:", error);
-                throw new Error("Failed to read JSON file");
+                console.error("Error reading data:", error);
+                throw new Error("Failed to read data");
             }
         },
         getAuthorById: async (_, { id }) => {
@@ -44,8 +60,36 @@ const resolvers = {
 
                 return author;
             } catch (error) {
-                console.error("Error reading JSON file:", error);
-                throw new Error("Failed to read JSON file");
+                console.error("Error reading data:", error);
+                throw new Error("Failed to read data");
+            }
+        },
+        getAllWorks: async () => {
+            try {
+                const worksData = await getAllWorks();
+
+                if (!worksData) {
+                    throw new Error(`Work data not found`);
+                }
+
+                return worksData;
+            } catch (error) {
+                console.error("Error reading data:", error);
+                throw new Error("Failed to read data");
+            }
+        },
+        getWorkById: async (_, { id }) => {
+            try {
+                const author = await getWorkById(id);
+
+                if (!author) {
+                    throw new Error(`Work with ID ${id} not found`);
+                }
+
+                return author;
+            } catch (error) {
+                console.error("Error reading data:", error);
+                throw new Error("Failed to read data");
             }
         },
     },
@@ -56,6 +100,19 @@ const resolvers = {
             } catch (error) {
                 console.error(`Error getting works for author ${id}:`, error);
                 throw new Error(`Failed to get works for author ${id}`);
+            }
+        },
+    },
+    Work: {
+        author: async ({ authorId }) => {
+            try {
+                return getAuthorOfWork(authorId);
+            } catch (error) {
+                console.error(
+                    `Error getting works for author ${authorId}:`,
+                    error
+                );
+                throw new Error(`Failed to get works for author ${authorId}`);
             }
         },
     },
