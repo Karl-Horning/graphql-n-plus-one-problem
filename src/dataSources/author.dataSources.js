@@ -18,27 +18,8 @@ const getAuthorOfWork = async (id) =>
         },
     });
 
-const getAllWorks = async () => prisma.work.findMany();
-
-const getWorkById = async (id) =>
-    prisma.work.findUnique({
-        where: {
-            id,
-        },
-    });
-
-const getWorksByAuthor = async (authorId) =>
-    prisma.work.findMany({
-        where: {
-            authorId,
-        },
-    });
-
 module.exports = {
     getAllAuthors,
     getAuthorById,
     getAuthorOfWork,
-    getAllWorks,
-    getWorkById,
-    getWorksByAuthor,
 };

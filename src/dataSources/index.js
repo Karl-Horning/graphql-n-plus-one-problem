@@ -2,10 +2,13 @@ const {
     getAllAuthors,
     getAuthorById,
     getAuthorOfWork,
+} = require("./author.dataSources");
+
+const {
     getAllWorks,
     getWorkById,
     getWorksByAuthor,
-} = require("./dataSources");
+} = require("./work.dataSources");
 
 class DataSources {
     constructor() {
