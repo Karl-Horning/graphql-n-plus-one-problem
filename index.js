@@ -19,7 +19,15 @@ let server;
  */
 const startApolloServer = async () => {
     try {
-        server = new ApolloServer({ typeDefs, resolvers });
+        server = new ApolloServer({
+            typeDefs,
+            resolvers,
+            context: () => ({
+                // Add chalk to the context
+                red,
+                yellow,
+            }),
+        });
         const { url } = await server.listen({ port });
         console.log(`Apollo Server started at ${url} 🚀`);
     } catch (error) {
