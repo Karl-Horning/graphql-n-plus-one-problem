@@ -1,44 +1,21 @@
-const { PrismaClient } = require("@prisma/client");
-
-const prisma = new PrismaClient();
-
-const getAllAuthors = async () => prisma.author.findMany();
-
-const getAuthorById = async (id) =>
-    prisma.author.findUnique({
-        where: {
-            id,
-        },
-    });
-
-const getAuthorOfWork = async (id) =>
-    prisma.author.findUnique({
-        where: {
-            id,
-        },
-    });
-
-const getAllWorks = async () => prisma.work.findMany();
-
-const getWorkById = async (id) =>
-    prisma.work.findUnique({
-        where: {
-            id,
-        },
-    });
-
-const getWorksByAuthor = async (authorId) =>
-    prisma.work.findMany({
-        where: {
-            authorId,
-        },
-    });
-
-module.exports = {
+const {
     getAllAuthors,
     getAuthorById,
     getAuthorOfWork,
     getAllWorks,
     getWorkById,
     getWorksByAuthor,
-};
+} = require("./dataSources");
+
+class DataSources {
+    constructor() {
+        this.getAllAuthors = getAllAuthors;
+        this.getAuthorById = getAuthorById;
+        this.getAuthorOfWork = getAuthorOfWork;
+        this.getAllWorks = getAllWorks;
+        this.getWorkById = getWorkById;
+        this.getWorksByAuthor = getWorksByAuthor;
+    }
+}
+
+module.exports = { DataSources };

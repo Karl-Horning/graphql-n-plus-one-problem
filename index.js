@@ -3,6 +3,7 @@ const { ApolloServer } = require("apollo-server");
 const chalk = require("chalk");
 const resolvers = require("./src/resolvers");
 const typeDefs = require("./src/schemas");
+const { DataSources } = require("./src/dataSources");
 
 // Load environment variables from .env file
 dotenv.config();
@@ -19,6 +20,8 @@ let server;
  */
 const startApolloServer = async () => {
     try {
+        const dataSources = new DataSources(); // Instantiate data sources
+
         server = new ApolloServer({
             typeDefs,
             resolvers,
@@ -26,6 +29,7 @@ const startApolloServer = async () => {
                 // Add chalk to the context
                 red,
                 yellow,
+                dataSources,
             }),
         });
         const { url } = await server.listen({ port });

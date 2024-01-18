@@ -1,17 +1,8 @@
-const {
-    getAllAuthors,
-    getAuthorById,
-    getAuthorOfWork,
-    getAllWorks,
-    getWorkById,
-    getWorksByAuthor,
-} = require("../dataSources");
-
 const resolvers = {
     Query: {
-        getAllAuthors: async () => {
+        getAllAuthors: async (_, __, { dataSources }) => {
             try {
-                const authorsData = await getAllAuthors();
+                const authorsData = await dataSources.getAllAuthors();
 
                 if (!authorsData) {
                     throw new Error(`Author data not found`);
@@ -23,9 +14,9 @@ const resolvers = {
                 throw new Error("Failed to read data");
             }
         },
-        getAuthorById: async (_, { id }) => {
+        getAuthorById: async (_, { id }, { dataSources }) => {
             try {
-                const author = await getAuthorById(id);
+                const author = await dataSources.getAuthorById(id);
 
                 if (!author) {
                     throw new Error(`Author with ID ${id} not found`);
@@ -37,9 +28,9 @@ const resolvers = {
                 throw new Error("Failed to read data");
             }
         },
-        getAllWorks: async () => {
+        getAllWorks: async (_, __, { dataSources }) => {
             try {
-                const worksData = await getAllWorks();
+                const worksData = await dataSources.getAllWorks();
 
                 if (!worksData) {
                     throw new Error(`Work data not found`);
@@ -51,9 +42,9 @@ const resolvers = {
                 throw new Error("Failed to read data");
             }
         },
-        getWorkById: async (_, { id }) => {
+        getWorkById: async (_, { id }, { dataSources }) => {
             try {
-                const author = await getWorkById(id);
+                const author = await dataSources.getWorkById(id);
 
                 if (!author) {
                     throw new Error(`Work with ID ${id} not found`);
@@ -67,9 +58,9 @@ const resolvers = {
         },
     },
     Author: {
-        works: async ({ id }) => {
+        works: async ({ id }, _, { dataSources }) => {
             try {
-                return getWorksByAuthor(id);
+                return dataSources.getWorksByAuthor(id);
             } catch (error) {
                 console.error(`Error getting works for author ${id}:`, error);
                 throw new Error(`Failed to get works for author ${id}`);
@@ -77,9 +68,9 @@ const resolvers = {
         },
     },
     Work: {
-        author: async ({ authorId }) => {
+        author: async ({ authorId }, _, { dataSources }) => {
             try {
-                return getAuthorOfWork(authorId);
+                return dataSources.getAuthorOfWork(authorId);
             } catch (error) {
                 console.error(
                     `Error getting works for author ${authorId}:`,
