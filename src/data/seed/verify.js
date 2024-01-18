@@ -1,7 +1,9 @@
 // Verify data in your main application or another script
 const { PrismaClient } = require("@prisma/client");
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient({
+    log: ["query"], // Enable query logging
+});
 
 const verifyData = async () => {
     try {

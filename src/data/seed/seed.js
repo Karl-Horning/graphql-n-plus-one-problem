@@ -2,7 +2,9 @@
 
 const { PrismaClient } = require("@prisma/client");
 
-const prisma = new PrismaClient();
+const prisma = new PrismaClient({
+    log: ["query"], // Enable query logging
+});
 
 const authorsToInsert = [
     {
@@ -384,7 +386,6 @@ const worksToInsert = [
 
 const seed = async () => {
     try {
-
         // createMany doesn't work with SQLite
         for (const person of authorsToInsert) {
             await prisma.author.create({
