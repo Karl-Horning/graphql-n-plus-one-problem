@@ -1,3 +1,5 @@
+// dataSources/index.js
+
 const {
     getAllAuthors,
     getAuthorById,
@@ -7,17 +9,20 @@ const {
 const {
     getAllWorks,
     getWorkById,
-    getWorksByAuthor,
+    getWorksByAuthorId,
 } = require("./work.dataSources");
 
 class DataSources {
     constructor() {
+        // Author data sources
         this.getAllAuthors = getAllAuthors;
         this.getAuthorById = getAuthorById;
         this.getAuthorOfWork = getAuthorOfWork;
+
+        // Work data sources
         this.getAllWorks = getAllWorks;
         this.getWorkById = getWorkById;
-        this.getWorksByAuthor = getWorksByAuthor;
+        this.getWorksByAuthorId = getWorksByAuthorId;
     }
 }
 

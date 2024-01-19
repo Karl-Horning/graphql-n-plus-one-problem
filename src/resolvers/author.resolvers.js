@@ -32,7 +32,7 @@ module.exports = {
     Author: {
         works: async ({ id }, _, { dataSources }) => {
             try {
-                return dataSources.getWorksByAuthor(id);
+                return dataSources.getWorksByAuthorId(id);
             } catch (error) {
                 console.error(`Error getting works for author ${id}:`, error);
                 throw new Error(`Failed to get works for author ${id}`);
