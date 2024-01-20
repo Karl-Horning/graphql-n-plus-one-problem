@@ -29,8 +29,27 @@ const getAuthorById = async (id) => prisma.author.findUnique(getByIdWhere(id));
 const getAuthorOfWork = async (id) =>
     prisma.author.findUnique(getByIdWhere(id));
 
+const createAnAuthor = async ({
+    name,
+    bio,
+    birthDate,
+    deathDate = "9999-12-31",
+}) => {
+    const createdAuthor = await prisma.author.create({
+        data: {
+            name,
+            birthDate: new Date(birthDate),
+            deathDate: new Date(deathDate),
+            bio,
+        },
+    });
+
+    return createdAuthor;
+};
+
 module.exports = {
     getAllAuthors,
     getAuthorById,
     getAuthorOfWork,
+    createAnAuthor,
 };

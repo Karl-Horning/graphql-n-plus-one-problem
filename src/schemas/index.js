@@ -57,7 +57,7 @@ const typeDefs = gql`
         """
         Date of death (if applicable) of the author
         """
-        deathDate: String!
+        deathDate: String
 
         """
         List of works by the author
@@ -93,6 +93,30 @@ const typeDefs = gql`
         Get work details by its unique identifier
         """
         getWorkById(id: Int!): Work
+    }
+
+    type Mutation {
+        createAnAuthor(
+            """
+            Name of the author
+            """
+            name: String
+
+            """
+            Birthdate of the author
+            """
+            birthDate: String
+
+            """
+            Date of death (if applicable) of the author
+            """
+            deathDate: String
+
+            """
+            Biography or additional information about the author
+            """
+            bio: String
+        ): Author
     }
 `;
 
