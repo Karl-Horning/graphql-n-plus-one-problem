@@ -127,5 +127,4 @@ dist
 .pnp.*
 
 # Database files
-./src/data/db/*
-src/data/db/*
+*.db
