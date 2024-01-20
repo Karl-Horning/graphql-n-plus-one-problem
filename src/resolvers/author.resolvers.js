@@ -1,5 +1,19 @@
+/**
+ * Author resolvers for GraphQL queries.
+ * @module resolvers/author
+ */
+
 module.exports = {
     Query: {
+        /**
+         * Resolver for the getAllAuthors query.
+         * @async
+         * @param {Object} _ - The parent object (not used).
+         * @param {Object} __ - The arguments object (not used).
+         * @param {Object} context - The context object containing dataSources.
+         * @returns {Promise<Array>} A Promise that resolves to an array of authors.
+         * @throws {Error} If there is an error reading the data or if author data is not found.
+         */
         getAllAuthors: async (_, __, { dataSources }) => {
             try {
                 const authorsData = await dataSources.getAllAuthors();
@@ -14,6 +28,16 @@ module.exports = {
                 throw new Error("Failed to read data");
             }
         },
+        /**
+         * Resolver for the getAuthorById query.
+         * @async
+         * @param {Object} _ - The parent object (not used).
+         * @param {Object} args - The arguments object containing 'id'.
+         * @param {number} args.id - The unique identifier of the author.
+         * @param {Object} context - The context object containing dataSources.
+         * @returns {Promise<Object|null>} A Promise that resolves to the author object or null if not found.
+         * @throws {Error} If there is an error reading the data or if the author with the specified ID is not found.
+         */
         getAuthorById: async (_, { id }, { dataSources }) => {
             try {
                 const author = await dataSources.getAuthorById(id);
@@ -30,6 +54,15 @@ module.exports = {
         },
     },
     Author: {
+        /**
+         * Resolver for the 'works' field of the Author type.
+         * @async
+         * @param {Object} parent - The parent object (Author).
+         * @param {Object} _ - The arguments object (not used).
+         * @param {Object} context - The context object containing dataSources.
+         * @returns {Promise<Array>} A Promise that resolves to an array of works by the specified author.
+         * @throws {Error} If there is an error getting the works or if the works for the author are not found.
+         */
         works: async ({ id }, _, { dataSources }) => {
             try {
                 return dataSources.getWorksByAuthorId(id);
