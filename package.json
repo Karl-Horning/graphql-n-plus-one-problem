@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
+    "seed": "node prisma/seed/seed",
+    "verify": "node prisma/seed/verify",
     "dev": "nodemon index",
     "test": "jest"
   },
