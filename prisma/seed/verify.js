@@ -1,5 +1,7 @@
 // verify.js
 const { PrismaClient } = require("@prisma/client");
+const chalk = require("chalk");
+const { yellow, green } = chalk;
 
 // Initialize Prisma client
 const prisma = new PrismaClient({
@@ -14,11 +16,11 @@ const verifyData = async () => {
     try {
         // Fetch and log all authors
         const allAuthors = await prisma.author.findMany();
-        console.log("All authors:", allAuthors);
+        console.log(yellow(`There are ${green(allAuthors.length)} authors`));
 
         // Fetch and log all works
         const allWorks = await prisma.work.findMany();
-        console.log("All works:", allWorks);
+        console.log(yellow(`There are ${green(allWorks.length)} works`));
     } catch (error) {
         console.error("Error verifying data:", error);
     } finally {
