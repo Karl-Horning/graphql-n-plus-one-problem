@@ -28,4 +28,22 @@ const formatTimestampToYYYYMMDD = (timestamp) => {
     return `${year}-${month}-${day}`;
 };
 
-module.exports = { getByIdWhere, getByAuthorIdWhere, formatTimestampToYYYYMMDD };
+/**
+ * Format author data for consistent output.
+ * @param {Object} author - The author object from the database.
+ * @returns {Object} The formatted author object.
+ */
+const formatAuthorData = (author) => ({
+    id: author.id,
+    name: author.name,
+    bio: author.bio,
+    birthDate: formatTimestampToYYYYMMDD(author.birthDate),
+    deathDate: formatTimestampToYYYYMMDD(author.deathDate),
+});
+
+module.exports = {
+    getByIdWhere,
+    getByAuthorIdWhere,
+    formatAuthorData,
+    formatTimestampToYYYYMMDD,
+};
