@@ -64,9 +64,47 @@ const createAnAuthor = async ({
     return createdAuthor;
 };
 
+/**
+ * Delete an author by their unique identifier (id) or name.
+ * @param {Object} params - Object containing information for deleting an author.
+ * @param {number} [params.id] - The unique identifier of the author.
+ * @param {string} [params.name] - The name of the author.
+ * @returns {Promise<Object|null>} A Promise that resolves to the deleted author object or null if not found.
+ * @throws {Error} If neither id nor name is provided, or if the deletion fails.
+ */
+const deleteAnAuthor = async ({ id, name }) => {
+    if (!id && !name) {
+        console.error("An author ID or name must be included");
+        throw new Error("An author ID or name must be included");
+    }
+
+    let deletedAuthor;
+
+    // Delete by id if provided
+    if (id) {
+        deletedAuthor = await prisma.author.delete({
+            where: {
+                id,
+            },
+        });
+    }
+
+    // Delete by name if provided
+    if (name) {
+        deletedAuthor = await prisma.author.delete({
+            where: {
+                name,
+            },
+        });
+    }
+
+    return deletedAuthor;
+};
+
 module.exports = {
     getAllAuthors,
     getAuthorById,
     getAuthorOfWork,
     createAnAuthor,
+    deleteAnAuthor,
 };

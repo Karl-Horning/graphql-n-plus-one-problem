@@ -5,6 +5,7 @@ const {
     getAuthorById,
     getAuthorOfWork,
     createAnAuthor,
+    deleteAnAuthor,
 } = require("./author.dataSources");
 
 const {
@@ -20,6 +21,7 @@ class DataSources {
         this.getAuthorById = getAuthorById;
         this.getAuthorOfWork = getAuthorOfWork;
         this.createAnAuthor = createAnAuthor;
+        this.deleteAnAuthor = deleteAnAuthor;
 
         // Work data sources
         this.getAllWorks = getAllWorks;

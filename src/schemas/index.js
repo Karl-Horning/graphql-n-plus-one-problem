@@ -116,7 +116,19 @@ const typeDefs = gql`
             Biography or additional information about the author
             """
             bio: String
-        ): Author
+        ): Author!
+
+        deleteAnAuthor(
+            """
+            Unique identifier for the author
+            """
+            id: Int
+
+            """
+            Name of the author
+            """
+            name: String
+        ): Author!
     }
 `;
 
