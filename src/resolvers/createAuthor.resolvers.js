@@ -1,5 +1,5 @@
 /**
- * Resolvers for GraphQL mutations related to authors.
+ * Resolvers for GraphQL create mutations related to authors.
  * @module resolvers/author
  */
 module.exports = {
